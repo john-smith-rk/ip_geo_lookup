@@ -11,29 +11,49 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
+THis package is to get the public IP of the current network.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This `ip_geo_lookup` package totally supporst for `iOS`, `Android` , `Web`, `Linux` and `MacOS`.  
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+THis package need the Internet.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+### Android
+Add `INTERNET` permission in `AndroidManifest.xml`
+```Java
+<uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-## Additional information
+To get data, use `IPGeoLookupUtility` directly. It will return `IPInfo` with list.
+In `CountryData`, the following fields will include ..  
+```dart
+   String? ip;
+   bool? success;
+   String? type;
+   String? continent;
+   String? continentCode;
+   String? country;
+   String? countryCode;
+   String? region;
+   String? regionCode;
+   String? city;
+   double? latitude;
+   double? longitude;
+   bool? isEu;
+   String? postal;
+   String? callingCode;
+   String? capital;
+   List<String>? borders;
+   Flag? flag;
+   Connection? connection;
+   Timezone? timezone;
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## DEMO
+<img src="assets/demo.png" width="200" height="400" alt="Android Video"/> 
+
+
