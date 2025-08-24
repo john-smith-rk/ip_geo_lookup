@@ -29,7 +29,12 @@ Add `INTERNET` permission in `AndroidManifest.xml`
 ```
 
 To get data, use `IPGeoLookupUtility` directly. It will return `IPInfo` with list.
-In `CountryData`, the following fields will include ..  
+
+```dart
+IPInfo? mData = await IPGeoLookupUtility.getIPInfo();
+```
+
+In `IPInfo`, the following fields will include ..  
 ```dart
    String? ip;
    bool? success;
